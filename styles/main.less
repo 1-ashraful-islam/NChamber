@@ -39,18 +39,20 @@
   padding-top: 20px;
 }
 
+//to fix the extra space on top of background
+#main-content {
+  padding-top: 50px;
+  background-color: @background-color;
+}
+
 #pop-parent-for-bg {
-  width: 100%;
-  max-height: 280px;
-  min-height: 20px;
+  width: 960px;
+  height: 260px;
   text-align: center;
   background: #333 url("@{base-url}/images/background-image.png") no-repeat center;
   background-size: cover;
   //  to fill the full width
-  padding-left: @baseline;
-  padding-right: @baseline;
-  margin-top: -@baseline;
-  margin-left: -@baseline;
+  margin: 0 auto;
   //  fix for custom background
   div.fullbg-container img {
     width: 100% !important;
@@ -68,12 +70,12 @@
     */
   }
   #pop-logo {
-    display: inline-block;
+//    display: inline-block;
     vertical-align: middle;
     width: 360px;
     height: 260px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 100px;
   }
 
 }
@@ -84,11 +86,10 @@ div#pop-parent-for-title-links {
 #pop-parent-for-title-links {
   position: relative;
   //  to fill the full width
-  margin-left: -@baseline;
   background-color: #1D1D1D;
-  margin-bottom: @baseline;
+  margin: 0 auto;
   height: 80px;
-  width: 1080px;
+  width: 960px;
   display: table;
   #pop-title {
     padding-left: 70px;
@@ -155,7 +156,10 @@ em, i {
   background: @footer-background-color;
   .footer-text-color();
   .asset{
-      background-color:#333333;
+      background-color:lighten(@footer-background-color,5%);
+    .asset-title {
+      color: #e2e2e2;
+    }
   }
   a { text-decoration: none !important; }
   a:hover { text-decoration: underline !important; }
@@ -273,7 +277,7 @@ a, a:hover, a:visited, a:active {
         background-color:#E9E9E9;
         .slideshow{
             display:block;
-            margin:0 10px;
+            margin:0 ;
             .cycle-pager {
                 background-color: #F7F7F7;
                 border:1px solid #E9E9E9;
@@ -344,17 +348,17 @@ a, a:hover, a:visited, a:active {
 }
 
 .columnizer-col1 .documents > li {
-  height: 92px;
+  min-height: 92px;
   .icon_width(960px, 6);
 }
 
 .columnizer-col2 .documents > li {
-  height: 92px;
+  min-height: 92px;
   .icon_width(470px, 3);
 }
 
 .columnizer-col3 .documents > li {
-  height: 92px;
+  min-height: 92px;
   .icon_width(305px, 2);
 }
 
@@ -529,8 +533,14 @@ a, a:hover, a:visited, a:active {
   }
 }
 }
+.populr-image-slider{
+padding-bottom: 30px;
+}
+.embedded-object {
+  margin-bottom: 30px;
+}
 
-@media screen and (max-width: 960px)  {
+  @media screen and (max-width: 960px)  {
   #populr > .mobile-reset();
   
 #pop img:not(.populr-mobile-noresize):not(#background-image) {
