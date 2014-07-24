@@ -82,15 +82,24 @@
 
 }
 
+
+.has-title #pop-parent-for-title-links {
+  position: relative;
+  //  to fill the full width
+  background-color: #1D1D1D;
+  margin: 0 auto;
+  height: 80px;
+  width: 960px;
+  display: table;
   #pop-title {
-    height: 80px;
-    width: 960px;
-    margin: 0 auto;
-    background-color: #1D1D1D;
+    padding-left: 0;
+    display: table-cell;
+    vertical-align: middle;
     color: #d2d2d2;
+    //  text-align: center;
 
   }
-
+}
 
 .has-links #logo-pop-links{
     width: 960px;
@@ -165,12 +174,11 @@ a, a:hover, a:visited, a:active {
   .title-color();
   font-family: @headline-font-family;
   font-weight: 200;
-  // font-style: italic;
   font-size: 18px;
   line-height: 1.2;
   position:relative;
-  top:10px;
-  margin-left:55px!important;
+
+
 }
 
 #pop-sharing { padding: 10px 0 5px; }
