@@ -29,14 +29,17 @@
 #populr > .link-button(@custom-color);
 #populr > .icon(@custom-color);
 #populr > .inline-logo-title();
-#main-region, #footer-region { padding: 15px 10px }
+
 #main-region{
-    padding-top:45px;
+    width: 960px;
+    margin: 45px auto 0;
+    border: 1px solid #ccc;
+
 }
 
 #footer-region {
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 //to fix the extra space on top of background
@@ -190,11 +193,12 @@ a, a:hover, a:visited, a:active {
   padding: 0 0 @row-padding;
   margin: 0 auto;
   width: @pop-width;
+  #footer-region & {
+    padding-bottom: 15px;
+  }
 }
 
-#footer-region .columnizer-row:first-child,#footer-region .columnizer-row:last-child{
-    padding-top: 15px;
-}
+
 
 .columnizer-col, .columnizer-col2, .columnizer-col3 {
   float:left;
@@ -227,12 +231,11 @@ a, a:hover, a:visited, a:active {
 }
 
 
-#main-region .columnizer-cols2 .columnizer-col:first-child .asset-type-imagegroup .asset-content.small{display:none!important;}
-#main-region .columnizer-cols2 .columnizer-col:last-child .asset-type-imagegroup .asset-content.big{display:none!important;}
+//#main-region .columnizer-cols2 .columnizer-col:first-child .asset-type-imagegroup .asset-content.small{display:none!important;}
+//#main-region .columnizer-cols2 .columnizer-col:last-child .asset-type-imagegroup .asset-content.big{display:none!important;}
 
 .asset {
   .asset-background();
-  border:1px solid #bbb;
 
   .asset-text {
     padding: @text-padding;
@@ -250,11 +253,9 @@ a, a:hover, a:visited, a:active {
 
 .asset-type-embedgroup.asset-size-1 h2.asset-title { margin-bottom: 0; }
 
-.asset-type-imagegroup, .asset-type-embedgroup {
-  .asset-content { margin-bottom: @content-margin-bottom; }
-}
+
 .asset-type-imagegroup .asset-text{
-    padding-top:25px;
+    padding-top:15px;
 }
 #main-region .asset-type-imagegroup.asset-size-1{
     .asset-text{
@@ -265,8 +266,8 @@ a, a:hover, a:visited, a:active {
             display:block;
             margin:0 ;
             .cycle-pager {
-                background-color: #F7F7F7;
-                border:1px solid #E9E9E9;
+//                background-color: #F7F7F7;
+//                border:1px solid #E9E9E9;
                 border-top:none;
                 bottom: -48px;
                 padding: 0 10px;
@@ -279,17 +280,9 @@ a, a:hover, a:visited, a:active {
 }
 
 
-#main-region .columnizer-row-contents-imagegroup{
-    margin-bottom:23px;
-}
 
-#footer-region .columnizer-row:first-child .asset-type-text .asset-text{
-    padding-top: 0;
-}
 
-#footer-region .columnizer-row:first-child .asset-type-document .asset-text{
-    padding-top: 0;
-}
+
 
 #main-region, #footer-region {
   .link-btn{
@@ -335,17 +328,17 @@ a, a:hover, a:visited, a:active {
 }
 
 .columnizer-col1 .documents > li {
-  min-height: 92px;
+  min-height: 120px;
   .icon_width(960px, 6);
 }
 
 .columnizer-col2 .documents > li {
-  min-height: 92px;
+  min-height: 120px;
   .icon_width(470px, 3);
 }
 
 .columnizer-col3 .documents > li {
-  min-height: 92px;
+  min-height: 120px;
   .icon_width(305px, 2);
 }
 
@@ -465,28 +458,13 @@ a, a:hover, a:visited, a:active {
 }
 .lt-ie8 .cycle-pager { display: none; }
 
-.columnizer-col {
-        #main-region .columnizer-cols2 & {
-            &:first-child{
-                width:626px;
-                margin-left:0;
 
-            }
-            &:last-child{
-                width:313px;
-                margin-left:21px;
-                .asset-type-imagegroup .asset-content.big{
-                    display: none!important;
-                }
-            }
-        }
-}
 
 /////////////////////////////////////
 //code for Nchamber customization
 
 #main-region {
-  background: @background-color;
+  background: #fff;
 
 .asset-size-1 .asset-title {
   background: #414142;
@@ -543,6 +521,16 @@ a, a:hover, a:visited, a:active {
     margin-right:auto;
     width: auto;
   }
+  #pop-parent-for-title-links {
+    width: 720px;
+  }
+  #main-region {
+    max-width: 720px;
+    width: auto;
+  }
+    #footer-region .columnizer-row {
+      padding-bottom: 0px;
+    }
 
   .asset-type-imagegroup .image-container, .asset-type-imagegroup .asset-inner:before, .asset-type-imagegroup .asset-inner:after { width: inherit!important; height: inherit!important; background: transparent!important; }
   .asset-type-imagegroup .image-title { width: 100% !important; }
@@ -603,14 +591,15 @@ a, a:hover, a:visited, a:active {
 @media screen and (max-width: 600px) {
   h1#pop-title {
     font-size: 16px !important;
-    margin-bottom: 20px !important;
-    margin-left:40px!important;
+    margin: 0 auto !important;
   }
   .cycle-pager{
     width:96%!important;
     left:-8px;
 }
-
+  #pop-parent-for-title-links {
+    width: 100%;
+  }
 
 }
 

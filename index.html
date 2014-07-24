@@ -68,25 +68,21 @@
     </div>
     {{/if_or}}
     <div class="asset-content">
-            {{{imageslider images width=958 height=330 prevnext-enabled=false pager-enabled=true crop_single = true}}}
+            {{{imageslider images width=960 height=330 prevnext-enabled=false pager-enabled=true crop_single = true}}}
         </div>
       {{/asset}}
 
-      {{#asset "imagegroup" size="2"}}
-
-    {{#if_or title_visible description_visible}}
-    <div class="asset-text">
-        {{{title}}}
-        {{{description}}}
-    </div>
-    {{/if_or}}
-    <div class="asset-content big">
-        {{{imageslider images width=624 height=260 prevnext-enabled=false pager-enabled=true crop_single = true}}}
-    </div>
-    <div class="asset-content small">
-        {{{imageslider images width=311 height=260 prevnext-enabled=false pager-enabled=true crop_single = true}}}
-    </div>
-    {{/asset}}
+  {{#asset "imagegroup" size="2"}}
+  {{#if_or title_visible description_visible}}
+  <div class="asset-text">
+      {{{title}}}
+      {{{description}}}
+  </div>
+  {{/if_or}}
+  <div class="asset-content">
+      {{{imageslider images width=469 height=260 prevnext-enabled=false pager-enabled=true}}}
+  </div>
+  {{/asset}}
 
       {{#asset "imagegroup" size="3"}}
         {{#if_or title_visible description_visible}}
@@ -96,7 +92,7 @@
     </div>
     {{/if_or}}
     <div class="asset-content">
-        {{{imageslider images width=304 height=230 prevnext-enabled=false pager-enabled=true crop_single = true}}}
+        {{{imageslider images width=306 height=230 prevnext-enabled=false pager-enabled=true crop_single = true}}}
     </div>
     {{/asset}}
 
@@ -140,7 +136,7 @@
         </ul>
       {{/asset}}
 
-      {{#asset "embedgroup" size="1" width="958"}}
+      {{#asset "embedgroup" size="1" width="960"}}
         {{#if title_visible}}
           <div class="asset-text">
             {{{title}}}
@@ -225,7 +221,7 @@
     </div>
     {{/if_or}}
     <div class="asset-content">
-        {{{imageslider images width=958 height=330 prevnext-enabled=false pager-enabled=true}}}
+        {{{imageslider images width=960 height=330 prevnext-enabled=false pager-enabled=true}}}
     </div>
     {{/asset}}
       
@@ -237,7 +233,7 @@
     </div>
     {{/if_or}}
     <div class="asset-content">
-        {{{imageslider images width=467 height=260 prevnext-enabled=false pager-enabled=true}}}
+        {{{imageslider images width=469 height=260 prevnext-enabled=false pager-enabled=true}}}
     </div>
     {{/asset}}
 
@@ -249,7 +245,7 @@
     </div>
     {{/if_or}}
     <div class="asset-content">
-        {{{imageslider images width=304 height=230 prevnext-enabled=false pager-enabled=true}}}
+        {{{imageslider images width=306 height=230 prevnext-enabled=false pager-enabled=true}}}
     </div>
     {{/asset}}
       
@@ -261,7 +257,7 @@
     </div>
     {{/if_or}}
     <div class="asset-content">
-        {{{imageslider images width=223 height=180 prevnext-enabled=false pager-enabled=true}}}
+        {{{imageslider images width=225 height=180 prevnext-enabled=false pager-enabled=true}}}
     </div>
     {{/asset}}
 
