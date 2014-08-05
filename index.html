@@ -28,7 +28,7 @@
        prevent issues with quote escaping and invalid markup. -->
   <script id="theme" type="text/x-handlebars-template">
   {{#region "columnizer" id="banner-region" max_cols="1" max_auto_assets="1" dummy_content="I-4"}}
-  {{logo max_width=360 max_height=260}}
+  <div>{{logo max_width=360 max_height=260}}</div>
   {{#asset "imagegroup" size="1"}}
   <div class="asset-content">
       {{{imageslider images width=960 height=330 prevnext-enabled=false pager-enabled=true crop_single = true}}}
