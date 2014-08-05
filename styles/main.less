@@ -49,7 +49,7 @@
 }
 
   #pop-logo {
-display: none;
+display: none !important;
   }
 
 #banner-region {
@@ -59,7 +59,7 @@ display: none;
   margin: 0 auto -25px;
   #chamber-logo {
     //    display: inline-block;
-    background: url("../images/logo.png") no-repeat;
+    background: url("@{base-url}/images/logo.png") no-repeat;
     vertical-align: middle;
     width: 360px;
     height: 260px;
@@ -118,6 +118,8 @@ display: none;
     font-family: 'Oswald',Arial, sans-serif;
     padding:5px !important ;
     color: #fff !important;
+    line-height: 32px;
+    display: inline-block;
 
   }
 }
