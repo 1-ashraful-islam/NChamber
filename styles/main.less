@@ -54,6 +54,7 @@
   position: relative;
   text-align: center;
   margin: 0 auto;
+  z-index: 1000;
 
   &:before {
     content: '';
@@ -69,7 +70,8 @@
     height: 260px;
     position: absolute;
     top: 50px;
-    left: -1px;
+    left: 0px;
+    padding: 0 !important;
   }
 }
 #banner-region {
@@ -618,6 +620,13 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  #main-content {
+    padding-top: 20px;
+  }
+  #pop-logo {
+    zoom: 0.7;
+    top: 40px;
+  }
   h1#pop-title {
     font-size: 16px !important;
     margin: 0 auto !important;
@@ -633,6 +642,9 @@ body {
 }
 
 @media screen and (max-width: 340px) {
+  #main-content {
+    padding-top: 15px;
+  }
   .documents > li {
     margin: 10px auto !important;
     float: none !important;
