@@ -27,10 +27,11 @@
   <!-- Put your theme's inside this script tag. The script tag will
        prevent issues with quote escaping and invalid markup. -->
   <script id="theme" type="text/x-handlebars-template">
-  <div id="pop-parent-for-bg">
-      {{logo max_width=360}}
-  </div>
+
+      {{logo max_height=0}}
+
   {{#region "columnizer" id="banner-region" max_cols="1" max_auto_assets="1" dummy_content="I-4"}}
+          <div id="chamber-logo"></div>
   {{#asset "imagegroup" size="1"}}
   <div class="asset-content">
       {{{imageslider images width=960 height=330 prevnext-enabled=false pager-enabled=true crop_single = true}}}

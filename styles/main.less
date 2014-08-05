@@ -48,45 +48,39 @@
   background-color: none;
 }
 
-#pop-parent-for-bg {
-  max-width: 960px;
-  height: 0px;
-  position: relative;
-  text-align: center;
-  margin: 0 auto;
-  z-index: 1000;
-
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em;  //Adjusts for spacing
-  }
   #pop-logo {
+display: none;
+  }
+
+#banner-region {
+  position: relative;
+  max-width: 960px;
+  min-height: 250px;
+  margin: 0 auto -25px;
+  #chamber-logo {
     //    display: inline-block;
+    background: url("../images/logo.png") no-repeat;
     vertical-align: middle;
     width: 360px;
     height: 260px;
     position: absolute;
     top: 50px;
-    left: 0px;
+    left: -1px;
     padding: 0 !important;
+    z-index: 1000;
   }
-}
-#banner-region {
-  position: relative;
-  max-width: 960px;
-  margin: 0 auto -25px;
 
 .asset-type-imagegroup {
     &.asset-size-1 {
+      .asset-text {
+        background: #1d1d1d !important;
+        color: #f1f1f1 !important;
+      }
 
-   .asset-title {
-     color: #d2d2d2 !important;
-     background: #1d1d1d !important;
-     margin: 0 -15px !important;
-     padding: 3px 15px !important;
+      .asset-title {
+        color: #f1f1f1 !important;
+        margin: 0 -15px !important;
+     padding: 15px !important;
      font-size: 20px;
 
    }
@@ -115,14 +109,16 @@
 .has-title #pop-parent-for-title-links {
   position: relative;
   //  to fill the full width
-  background-color: @background-color;
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 960px;
   width: auto;
   #pop-title {
-    padding:15px !important ;
-    #populr > .text-color-over-color(@background-color);
-    width: 960px;
+    background-color: #0B7ABF;
+    font-size: 14px !important;
+    font-family: 'Oswald',Arial, sans-serif;
+    padding:5px !important ;
+    color: #fff !important;
+
   }
 }
 
@@ -560,6 +556,10 @@ body {
     max-width: 720px;
     width: auto;
   }
+    #banner-region {
+    max-width: 720px;
+    width: auto;
+  }
     #footer-region .columnizer-row {
       padding-bottom: 0px;
     }
@@ -624,7 +624,7 @@ body {
   #main-content {
     padding-top: 20px;
   }
-  #pop-logo {
+  #chamber-logo {
     zoom: 0.7;
     top: 40px;
   }
