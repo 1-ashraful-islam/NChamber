@@ -51,24 +51,24 @@
   #pop-logo {
 display: none !important;
   }
-
+#chamber-logo {
+  //    display: inline-block;
+  background: url("@{base-url}/images/logo.png") no-repeat;
+  vertical-align: middle;
+  width: 360px;
+  height: 130px;
+  position: absolute;
+  top: 120px;
+  left: -1px;
+  padding: 0 !important;
+  z-index: 1000;
+}
 #banner-region {
   position: relative;
   max-width: 960px;
   min-height: 200px;
   margin: 0 auto -25px;
-  #chamber-logo {
-    //    display: inline-block;
-    background: url("@{base-url}/images/logo.png") no-repeat;
-    vertical-align: middle;
-    width: 360px;
-    height: 130px;
-    position: absolute;
-    top: 50px;
-    left: -1px;
-    padding: 0 !important;
-    z-index: 1000;
-  }
+
 
 .asset-type-imagegroup {
     &.asset-size-1 {
@@ -116,7 +116,7 @@ display: none !important;
     background-color: #0B7ABF;
     font-size: 14px !important;
     font-family: 'Oswald',Arial, sans-serif;
-    padding:5px !important ;
+    padding:5px 15px !important ;
     color: #fff !important;
     line-height: 32px;
     display: inline-block;
@@ -157,6 +157,9 @@ em, i {
 
 #main-content {
   overflow: visible;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
 }
 
 #header-separator {
@@ -555,6 +558,9 @@ body {
     max-width: 720px !important;
   }
   #main-region {
+    max-width: 720px;
+    width: auto;
+  }#main-content {
     max-width: 720px;
     width: auto;
   }
