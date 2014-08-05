@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- Name of your theme -->
-  <title>Edgefield-invivolink-tanvir</title>
+  <title>NChamber</title>
   <meta itemprop="palette" content="palette-default" title="Default" data-preview="#ffffff,#222222">
   <meta itemprop="palette" content="palette-custom" title="Custom" data-preview="custom">
   <meta itemprop="palette" content="palette-transparent" title="Transparent" data-preview="transparent">
@@ -14,7 +14,7 @@
   <meta itemprop="dummyContentLength" content="short">
   <!--<meta itemprop="defaultBackground" content="" data-position="c" data-style="tile" data-color="#FFF">-->
     <!--to make the user specified background as logo background -->
-    <meta itemprop="backgroundContainer" content="#pop-parent-for-bg">
+    <!--<meta itemprop="backgroundContainer" content="#pop-parent-for-bg">-->
   <!-- This script loads the Populr theming engine. Populr will automatically
        remove it at runtime. -->
   
@@ -27,9 +27,27 @@
   <!-- Put your theme's inside this script tag. The script tag will
        prevent issues with quote escaping and invalid markup. -->
   <script id="theme" type="text/x-handlebars-template">
-  <div id="pop-parent-for-bg">
-      {{logo max_width=360 max_height=260}}
+  {{#region "columnizer" id="banner-region" max_cols="1" max_auto_assets="1" dummy_content="I-4"}}
+  {{logo max_width=360 max_height=260}}
+  {{#asset "imagegroup" size="1"}}
+  <div class="asset-content">
+      {{{imageslider images width=960 height=330 prevnext-enabled=false pager-enabled=true crop_single = true}}}
   </div>
+  {{#if_or title_visible description_visible}}
+  <div class="asset-text">
+      {{{title}}}
+      {{{description}}}
+  </div>
+  {{/if_or}}
+  {{/asset}}
+
+  {{/region}}
+<!--
+  <div id="pop-parent-for-bg">
+
+  </div>
+-->
+
   <div id="pop-parent-for-title-links">
       {{{title}}}
   </div>
@@ -38,6 +56,8 @@
     <div id="header-separator"></div>
     
     {{#region "columnizer" id="main-region" max_cols="3" max_auto_assets="0" dummy_content="I-1|I-2,I-2|T-2,I-1|T-1,V-1|V-1,V-1|V-1,V-1,V-1|E-1,T-1,T-3|D-1|D-6|D-3,I-1,T-1|T-1,I-4|T-1"}}
+
+
       {{#asset "text" size="1"}}
         <div class="asset-text">
           {{{title}}}

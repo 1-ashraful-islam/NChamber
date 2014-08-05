@@ -45,10 +45,10 @@
 //to fix the extra space on top of background
 #main-content {
   padding-top: 50px;
-  background-color: @background-color;
+  background-color: none;
 }
 
-#pop-parent-for-bg {
+/*#pop-parent-for-bg {
   width: 960px;
   height: 260px;
   position: relative;
@@ -67,12 +67,15 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    margin-right: -0.25em; /* Adjusts for spacing */
+    margin-right: -0.25em; *//* Adjusts for spacing *//*
 
-    /* For visualization
+    *//* For visualization
     background: #808080; width: 5px;
-    */
+    *//*
   }
+}*/
+#banner-region {
+  position: relative;
   #pop-logo {
     //    display: inline-block;
     vertical-align: middle;
@@ -82,8 +85,8 @@
     top: 50px;
     left: -1px;
   }
-
 }
+
 
 
 .has-title #pop-parent-for-title-links {
@@ -140,7 +143,7 @@ em, i {
 }
 
 #footer-region {
-  background: @background-color;
+//  background: @background-color;
   color: #fff;
   .footer-text-color();
   .asset{
@@ -466,7 +469,9 @@ a, a:hover, a:visited, a:active {
 
 /////////////////////////////////////
 //code for Nchamber customization
-
+body {
+  background: #E0E0E0 ;
+}
 #main-region {
   background: #fff;
 
